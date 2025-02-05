@@ -1,0 +1,109 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+proxies:
+  - name: R80:Vmess NL Fast (IPv4 & IPv6) 2025-02-13
+    server: eu-2.hihu.net
+    port: 80
+    type: vmess
+    uuid: 04845960-e3fe-11ef-b235-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: 104.26.7.171
+    network: ws
+    ws-opts:
+      path: /196l3vn7
+      headers:
+        Host: 104.26.7.171
+    udp: true
+  - name: R80:Vmess Singapore HE-1 Limit 2025-02-13
+    server: sg-1.hihu.net
+    port: 80
+    type: vmess
+    uuid: 2e40f170-e3fd-11ef-b835-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: 104.26.7.171
+    network: ws
+    ws-opts:
+      path: /o4sjmln0
+      headers:
+        Host: 104.26.7.171
+    udp: true
+  - name: R80:Vmess USA Virginia 2025-02-13
+    server: us-23.hihu.net
+    port: 80
+    type: vmess
+    uuid: 9724a7b0-e3fd-11ef-b231-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: 104.26.7.171
+    network: ws
+    ws-opts:
+      path: /eiw2k4pu
+      headers:
+        Host: 104.26.7.171
+    udp: true
+  - name: R80:Vmess USA LA 2025-02-13
+    server: us-21.hihu.net
+    port: 80
+    type: vmess
+    uuid: c53ed730-e3fd-11ef-b537-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: 104.26.7.171
+    network: ws
+    ws-opts:
+      path: /sm64cw7d
+      headers:
+        Host: 104.26.7.171
+    udp: true
+proxy-groups:
+  - name: FASTSSH-SSHKIT-HOWDY
+    type: select
+    proxies:
+      - R80:Vmess NL Fast (IPv4 & IPv6) 2025-02-13
+      - R80:Vmess Singapore HE-1 Limit 2025-02-13
+      - R80:Vmess USA Virginia 2025-02-13
+      - R80:Vmess USA LA 2025-02-13
+      - DIRECT
+rules:
+  - MATCH,FASTSSH-SSHKIT-HOWDY
