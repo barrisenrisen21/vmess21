@@ -33,7 +33,7 @@ dns:
     - 112.215.203.254
 proxies:
   - name: R80:Vmess NL Fast (IPv4 & IPv6) 2025-02-13
-    server: eu-2.hihu.net
+    server: 104.26.7.171
     port: 80
     type: vmess
     uuid: 04845960-e3fe-11ef-b235-205c6d5f5d78
@@ -41,15 +41,15 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: 104.26.7.171
+    servername: eu-2.hihu.net
     network: ws
     ws-opts:
       path: /196l3vn7
       headers:
-        Host: 104.26.7.171
+        Host: eu-2.hihu.net
     udp: true
   - name: R80:Vmess Singapore HE-1 Limit 2025-02-13
-    server: sg-1.hihu.net
+    server: 104.26.7.171
     port: 80
     type: vmess
     uuid: 2e40f170-e3fd-11ef-b835-205c6d5f5d78
@@ -57,15 +57,15 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: 104.26.7.171
+    servername: sg-1.hihu.net
     network: ws
     ws-opts:
       path: /o4sjmln0
       headers:
-        Host: 104.26.7.171
+        Host: sg-1.hihu.net
     udp: true
   - name: R80:Vmess USA Virginia 2025-02-13
-    server: us-23.hihu.net
+    server: 104.26.7.171
     port: 80
     type: vmess
     uuid: 9724a7b0-e3fd-11ef-b231-205c6d5f5d78
@@ -73,15 +73,15 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: 104.26.7.171
+    servername: us-23.hihu.net
     network: ws
     ws-opts:
       path: /eiw2k4pu
       headers:
-        Host: 104.26.7.171
+        Host: us-23.hihu.net
     udp: true
   - name: R80:Vmess USA LA 2025-02-13
-    server: us-21.hihu.net
+    server: 104.26.7.171
     port: 80
     type: vmess
     uuid: c53ed730-e3fd-11ef-b537-205c6d5f5d78
@@ -89,12 +89,12 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: 104.26.7.171
+    servername: us-21.hihu.net
     network: ws
     ws-opts:
       path: /sm64cw7d
       headers:
-        Host: 104.26.7.171
+        Host: us-21.hihu.net
     udp: true
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
